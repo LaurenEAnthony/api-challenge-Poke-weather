@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeWeather</title>
+
+</head>
+
+<body>
+    <form>
+        <p>
+            <label for="zipcode">Enter Zipcode </label>
+            <input type="text" pattern="[0-9]{5}" id="zipcode" required>
+        </p>
+        <p>
+            <label for="pokemon">Choose your Poke-Weather-Mon! </label>
+            <select id="pokemon">
+                <option value="select-one">Choose option</option>
+                <option value="pikachu">Pikachu!</option>
+                <option value="bulbasaur">Bulbasaur!</option>
+                <option value="charmander">Charmander!</option>
+                <option value="squirtle">Squirtle!</option>
+                <option value="psyduck">Psyduck!</option>
+            </select>
+        </p>
+        <button id="submit">Submit</button>
+    </form>
+
+    <div id="pics"></div>
+
+    <div id="stats"></div>
+
+    <div id="forecast"></div>
+
+    <script src="pokemon-weather.js"></script>
+</body>
+
+</html>

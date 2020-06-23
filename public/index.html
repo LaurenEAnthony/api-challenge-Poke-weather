@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeWeather</title>
-
+    <link rel="stylesheet" href="pokemon-weather.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <h1>Pokemon</h1>
+    <h1>"Weather-Mon"</h1>
+    <h3>Home of your Pokemon Meteorologists!</h3>
     <form>
         <p>
             <label for="zipcode">Enter Zipcode </label>
@@ -28,9 +32,66 @@
         <button id="submit">Submit</button>
     </form>
 
-    <div id="pics"></div>
-
-    <div id="stats"></div>
+    <div id="current">
+        <div id="forecast">
+            <img src="" id="bubble">
+            <p id="report"></p>
+            <img src="" id="icon">
+        </div>
+        <div id="meteorologist">
+            <img src="" id="pokemon-pic">
+        </div>
+    </div>
+    <br>
+    <br>
+    <div>
+        <table class="stats">
+            <tr>
+                <caption class="table-head">Your Poke-"Weather-Mon" Stats</caption>
+            </tr>
+            <tr>
+                <th scope="row">Name: </th>
+                <td id="name"></td>
+            </tr>
+            <tr>
+                <th scope="row"># </th>
+                <td id="id-num"></td>
+            </tr>
+            <tr>
+                <th scope="row">Type: </th>
+                <td id="type"></td>
+            </tr>
+        </table>
+        <table class="stats">
+            <tr>
+                <caption class="table-head">Base Stats</caption>
+            </tr>
+            <tr>
+                <th scope="row">HP: </th>
+                <td id="hp"></td>
+            </tr>
+            <tr>
+                <th scope="row">Attack: </th>
+                <td id="attack"></td>
+            </tr>
+            <tr>
+                <th scope="row">Defense: </th>
+                <td id="defense"></td>
+            </tr>
+            <tr>
+                <th scope="row">Special Attack: </th>
+                <td id="special-attack"></td>
+            </tr>
+            <tr>
+                <th scope="row">Special Defense: </th>
+                <td id="special-defense"></td>
+            </tr>
+            <tr>
+                <th scope="row">Speed: </th>
+                <td id="speed"></td>
+            </tr>
+        </table>
+    </div>
 
     <!-- <div id="forecast"></div> -->
 

@@ -1,0 +1,89 @@
+html {
+    background-color: grey;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-family: 'Press Start 2P', cursive;;
+    font-size: 3em;
+    color: gold;
+    -webkit-text-stroke: 2px darkblue;
+}
+
+h3{
+    font-family: 'Press Start 2P', cursive;
+    font-size: large;
+    color: darkblue;
+}
+
+form p {
+    color: midnightblue;
+    font-weight: bolder;
+}
+
+#submit{
+    height: 1.5em;
+    width: 5em;
+    background-color: orangered;
+    color: white;
+    border: transparent;
+    border-radius: 2px;
+}
+
+#current{
+    width: 80vw;
+    padding: 7vw;
+}
+
+#bubble{
+    width: 40vw;
+    position: relative;
+    top: auto;
+    float: left;
+}
+
+#forecast p{
+    font-family: 'Press Start 2P', cursive;
+    font-size: larger;
+    position: relative;
+    left: -37vw;
+    top: 15vh;
+    margin: 3vh 5vw 0 25vw;
+}
+
+#icon{
+    height: 15vh;
+    position: relative;
+    left: -40vw;
+    top: 25vh;
+}
+
+#pokemon-pic {
+    width: 40vw;
+    float: right;
+}
+
+
+.stats{
+    color: midnightblue;
+    table-layout: fixed;
+    width: 50vw;
+    border: solid 1px midnightblue;
+}
+
+.table-head{
+    text-align: center;
+    font-weight: bolder;
+}
+
+.stats th{
+    text-align: justify;
+    border: solid 2px midnightblue;
+}
+
+ .stats td{
+     text-align: justify;
+     border: solid 2px midnightblue;
+ }

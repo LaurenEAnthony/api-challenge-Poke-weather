@@ -189,6 +189,11 @@ function displayStats(json) {
     let typeData = document.getElementById('type')
     let typesArray = json.types
     // console.log(typesArray[0].type.name)
+
+    while (typeData.firstChild) {
+        typeData.removeChild(typeData.firstChild)
+    }
+
     for (opt in typesArray) {
         let typeOpt = document.createElement('p')
         typeOpt.innerText = typesArray[opt].type.name

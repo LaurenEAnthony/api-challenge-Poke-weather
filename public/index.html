@@ -1,96 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PokeWeather</title>
-    <link rel="stylesheet" href="pokemon-weather.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="pokemon-weather.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <h1>Pokemon</h1>
     <h1>"Weather-Mon"</h1>
     <h3>Home of your Pokemon Meteorologists!</h3>
     <form>
-        <p>
-            <label for="zipcode">Enter Zipcode </label>
-            <input type="text" pattern="[0-9]{5}" id="zipcode" required>
-        </p>
-        <p>
-            <label for="pokemon">Choose your Poke-Weather-Mon! </label>
-            <select id="pokemon">
-                <option value="select-one">Choose option</option>
-                <option value="pikachu">Pikachu!</option>
-                <option value="bulbasaur">Bulbasaur!</option>
-                <option value="charmander">Charmander!</option>
-                <option value="squirtle">Squirtle!</option>
-                <option value="psyduck">Psyduck!</option>
-            </select>
-        </p>
-        <button id="submit">Submit</button>
+      <p>
+        <label for="zipcode">Enter Zipcode </label>
+        <input type="text" pattern="[0-9]{5}" id="zipcode" required />
+      </p>
+      <p>
+        <label for="pokemon">Choose your Poke-Weather-Mon! </label>
+        <select id="pokemon">
+          <option value="select-one">Choose option</option>
+          <option value="Pikachu">Pikachu!</option>
+          <option value="Bulbasaur">Bulbasaur!</option>
+          <option value="Charmander">Charmander!</option>
+          <option value="Squirtle">Squirtle!</option>
+          <option value="Psyduck">Psyduck!</option>
+        </select>
+      </p>
+      <button id="submit">Submit</button>
     </form>
 
     <div id="current">
-        <div id="forecast">
-            <img src="" id="bubble">
-            <p id="report"></p>
-            <img src="" id="icon">
-        </div>
-        <div id="meteorologist">
-            <img src="" id="pokemon-pic">
-        </div>
+      <div id="forecast">
+        <img src="" id="bubble" />
+        <p id="report"></p>
+        <img src="" id="icon" />
+      </div>
+      <div id="meteorologist">
+        <img src="" id="pokemon-pic" />
+      </div>
     </div>
-    <br>
-    <br>
+    <br />
+    <br />
     <div>
-        <table class="stats">
-            <tr>
-                <caption class="table-head">Your Poke-"Weather-Mon" Stats</caption>
-            </tr>
-            <tr>
-                <th scope="row">Name: </th>
-                <td id="name"></td>
-            </tr>
-            <tr>
-                <th scope="row"># </th>
-                <td id="id-num"></td>
-            </tr>
-            <tr>
-                <th scope="row">Type: </th>
-                <td id="type"></td>
-            </tr>
-        </table>
-        <table class="stats">
-            <tr>
-                <caption class="table-head">Base Stats</caption>
-            </tr>
-            <tr>
-                <th scope="row">HP: </th>
-                <td id="hp"></td>
-            </tr>
-            <tr>
-                <th scope="row">Attack: </th>
-                <td id="attack"></td>
-            </tr>
-            <tr>
-                <th scope="row">Defense: </th>
-                <td id="defense"></td>
-            </tr>
-            <tr>
-                <th scope="row">Special Attack: </th>
-                <td id="special-attack"></td>
-            </tr>
-            <tr>
-                <th scope="row">Special Defense: </th>
-                <td id="special-defense"></td>
-            </tr>
-            <tr>
-                <th scope="row">Speed: </th>
-                <td id="speed"></td>
-            </tr>
-        </table>
+      <table class="stats">
+        <tr>
+          <caption class="table-head">
+            Your Poke-"Weather-Mon" Stats
+          </caption>
+        </tr>
+        <tr>
+          <th scope="row">Name:</th>
+          <td id="name"></td>
+        </tr>
+        <tr>
+          <th scope="row">#</th>
+          <td id="id-num"></td>
+        </tr>
+        <tr>
+          <th scope="row">Type:</th>
+          <td id="type"></td>
+        </tr>
+      </table>
+      <table class="stats">
+        <tr>
+          <caption class="table-head">
+            Base Stats
+          </caption>
+        </tr>
+        <tr>
+          <th scope="row">HP:</th>
+          <td id="hp"></td>
+        </tr>
+        <tr>
+          <th scope="row">Attack:</th>
+          <td id="attack"></td>
+        </tr>
+        <tr>
+          <th scope="row">Defense:</th>
+          <td id="defense"></td>
+        </tr>
+        <tr>
+          <th scope="row">Special Attack:</th>
+          <td id="special-attack"></td>
+        </tr>
+        <tr>
+          <th scope="row">Special Defense:</th>
+          <td id="special-defense"></td>
+        </tr>
+        <tr>
+          <th scope="row">Speed:</th>
+          <td id="speed"></td>
+        </tr>
+      </table>
     </div>
 
     <!-- <div id="forecast"></div> -->
@@ -103,23 +109,22 @@
     <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-analytics.js"></script>
 
     <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyDlnfFBs7D3P7oCa63PS-MA_MDEpcl3FKo",
-            authDomain: "lea-poke-weather-api-project.firebaseapp.com",
-            databaseURL: "https://lea-poke-weather-api-project.firebaseio.com",
-            projectId: "lea-poke-weather-api-project",
-            storageBucket: "lea-poke-weather-api-project.appspot.com",
-            messagingSenderId: "124107749518",
-            appId: "1:124107749518:web:e9f7ac22652491cc9131df",
-            measurementId: "G-9TJ8YSXS9S"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDlnfFBs7D3P7oCa63PS-MA_MDEpcl3FKo",
+        authDomain: "lea-poke-weather-api-project.firebaseapp.com",
+        databaseURL: "https://lea-poke-weather-api-project.firebaseio.com",
+        projectId: "lea-poke-weather-api-project",
+        storageBucket: "lea-poke-weather-api-project.appspot.com",
+        messagingSenderId: "124107749518",
+        appId: "1:124107749518:web:e9f7ac22652491cc9131df",
+        measurementId: "G-9TJ8YSXS9S",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
     </script>
 
     <script src="pokemon-weather.js"></script>
-</body>
-
+  </body>
 </html>

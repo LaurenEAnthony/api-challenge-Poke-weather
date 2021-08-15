@@ -108,8 +108,10 @@ function displayWeather(json1) {
   }
 
   const pokemonOpt = document.getElementById("pokemon").value;
+  const pokemonOptCap =
+    pokemonOpt.charAt(0).toUpperCase() + pokemonOpt.slice(1);
 
-  let sentence = `Hello! I am your meteorologist, ${pokemonOpt}!  Right now in ${currentLocation} it is ${currentTemp} degrees, with ${codeDescr}.`; //How can I capitalize Pokemon name here and in stats?
+  let sentence = `Hello! I am your meteorologist, ${pokemonOptCap}!  Right now in ${currentLocation} it is ${currentTemp} degrees, with ${codeDescr}.`;
 
   let para = document.getElementById("report");
   para.innerText = sentence;
@@ -165,7 +167,7 @@ let pokeSelectUrl;
 form.addEventListener("submit", fetchStats);
 
 function fetchStats(e) {
-  e.preventDefault(); //What is this doing?
+  e.preventDefault();
 
   let pokeSelectUrl = pokeBaseUrl + pokeSelect.value;
   console.log(pokeSelectUrl);
@@ -182,14 +184,13 @@ function fetchStats(e) {
 
 function displayStats(json) {
   let nameData = document.getElementById("name");
-  nameData.innerText = json.name;
+  nameData.innerText = json.name.charAt(0).toUpperCase() + json.name.slice(1);
 
   let idData = document.getElementById("id-num");
   idData.innerText = json.id;
 
   let typeData = document.getElementById("type");
   let typesArray = json.types;
-  // console.log(typesArray[0].type.name)
 
   while (typeData.firstChild) {
     typeData.removeChild(typeData.firstChild);
@@ -197,9 +198,11 @@ function displayStats(json) {
 
   for (opt in typesArray) {
     let typeOpt = document.createElement("p");
-    typeOpt.innerText = typesArray[opt].type.name;
+    typeOpt.innerText =
+      typesArray[opt].type.name.charAt(0).toUpperCase() +
+      typesArray[opt].type.name.slice(1);
     typeData.appendChild(typeOpt);
-  } //Need solution for clearing options with subsequent submits
+  }
 
   let hpData = document.getElementById("hp");
   hpData.innerText = json.stats[0].base_stat;

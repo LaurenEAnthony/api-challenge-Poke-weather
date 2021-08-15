@@ -46,7 +46,7 @@ form p {
 
 #icon {
   height: 15vh;
-  position: absolute;
+  position: relative;
   left: -40vw;
   top: 10vh;
 }
@@ -56,7 +56,7 @@ form p {
   font-size: larger;
   position: relative;
   left: -37vw;
-  top: auto;
+  top: 15vh;
   margin: 3vh 5vw 0 25vw;
 }
 

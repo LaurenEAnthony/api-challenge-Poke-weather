@@ -116,22 +116,18 @@ function displayWeather(json1) {
 
   let icon = document.getElementById("icon");
   if (currentCode <= 531) {
-    icon.src =
-      "https://archives.bulbagarden.net/media/upload/8/89/351Castform-Rainy.png";
+    icon.src = "/Images/351Castform-Rainy.webp";
   } else if (currentCode >= 600 && currentCode <= 622) {
-    icon.src =
-      "https://archives.bulbagarden.net/media/upload/f/f9/351Castform-Snowy.png";
+    icon.src = "/Images/351Castform-Snowy.webp";
   } else if (currentCode == 800 || currentCode == 801) {
-    icon.src =
-      "https://archives.bulbagarden.net/media/upload/b/b6/351Castform-Sunny.png";
+    icon.src = "/Images/351Castform-Sunny.webp";
   } else {
-    icon.src =
-      "https://archives.bulbagarden.net/media/upload/6/69/351-Castform.png";
+    icon.src = "/Images/castform.png";
   }
 
   let bubbleImg = document.getElementById("bubble");
-  // bubbleImg.src = "http://res.freestockphotos.biz/pictures/15/15679-illustration-of-a-cartoon-speech-bubble-pv.png"
-  bubbleImg.src = "https://openclipart.org/image/800px/128659";
+  bubbleImg.src =
+    "/Images/15679-illustration-of-a-cartoon-speech-bubble-pv.png";
 }
 
 // POKEAPI PULL & POKEMON IMAGES
@@ -140,15 +136,11 @@ const pokeSelect = document.getElementById("pokemon");
 form.addEventListener("submit", displayPokemon);
 
 let pokemonPics = {
-  pikachu:
-    "https://archives.bulbagarden.net/media/upload/b/b8/025Pikachu_LG.png",
-  bulbasaur:
-    "https://archives.bulbagarden.net/media/upload/2/21/001Bulbasaur.png",
-  charmander:
-    "https://archives.bulbagarden.net/media/upload/7/73/004Charmander.png",
-  squirtle:
-    "https://archives.bulbagarden.net/media/upload/3/39/007Squirtle.png",
-  psyduck: "https://archives.bulbagarden.net/media/upload/5/53/054Psyduck.png",
+  pikachu: "/Images/025_Pikachu.png",
+  bulbasaur: "/Images/001_Bulbasaur.png",
+  charmander: "/Images/004_Charmander.png",
+  squirtle: "/Images/007_Squirtle.png",
+  psyduck: "/Images/psyduck.png",
 };
 
 const pokePic = document.getElementById("pokemon-pic");
